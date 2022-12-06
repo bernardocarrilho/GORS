@@ -1,0 +1,4 @@
+quagga/ -> quagga config files and scripts
+setup_network.sh -> setting up docker networks and containers
+run.sh -> transfer quagga/ and setup_network.sh to target vm and run setup_network.sh
+cleanup.sh -> removes all created networks and containers on target vm

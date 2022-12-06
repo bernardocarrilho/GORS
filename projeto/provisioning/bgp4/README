@@ -1,0 +1,19 @@
+quagga/ -> quagga config files and scripts
+setup_network.sh -> setting up docker networks and containers
+prefix_hijacking.sh -> same as setup_network.sh, but to demonstrate prefix hijacking
+run.sh -> transfer quagga/ and setup_network.sh to target vm and run setup_network.sh
+run_ph.sh -> same as run.sh, but to setup prefix hijacking scenario
+cleanup.sh -> removes all created networks and containers on target vm
+run_link_down -> sets link from AS100 to AS200 down
+run_link_up.sh -> sets link from AS100 to AS200 ups
+
+
+Run run.sh or run_ph.sh to cleanup the target vm and setup the network.
+To test that the network is performing correctly, use the following commands:
+
+$ sudo docker exec org1_router1 /bin/bash -c 'vtysh -c "show ip bgp"'
+$ sudo docker exec org1_router1 /bin/bash -c 'vtysh -c "show ip route"'
+$ sudo docker exec org1_router1 /bin/bash -c 'vtysh -c "show bgp neighbors"'
+
+$ sudo docker exec org1_server1 /bin/bash -c 'ping 172.16.123.18'
+$ sudo docker exec org4_server1 /bin/bash -c 'ping 172.16.123.2'

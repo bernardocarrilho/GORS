@@ -1,0 +1,2 @@
+baseimage/ -> netubuntu baseimage
+build.sh -> trasfer baseimage to target vm and build

@@ -1,0 +1,2 @@
+1. Run set_gateway.sh
+2. Run docker_install_vmX.sh (Where X is either B or C, wherever docker will be installed)

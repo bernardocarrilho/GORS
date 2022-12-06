@@ -1,0 +1,2 @@
+bgp/ -> contains files for setting up the network
+netubuntu/ -> contains files to build the netubuntu image
