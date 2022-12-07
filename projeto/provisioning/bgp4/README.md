@@ -10,7 +10,7 @@
 
 
 # Instructions:
-Run run.sh or run_ph.sh to cleanup the target vm and setup the network.\
+Run *run.sh* or *run_ph.sh* to cleanup the target vm and setup the network.\
 To test that the network is performing correctly, use the following commands:
 
 $ sudo docker exec org1_router1 /bin/bash -c 'vtysh -c "show ip bgp"'\
